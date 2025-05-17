@@ -1,0 +1,214 @@
+/* styles.css - Shared styles for all pages */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Nav styling */
+nav {
+  background-color: #2c3e50;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+
+.navbar-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 5px;
+}
+
+.nav-btn {
+  background-color: #ecf0f1;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 8px 14px;
+  font-size: 14px;
+  color: #2c3e50;
+}
+
+.nav-btn:hover {
+  opacity: 0.85;
+}
+
+.nav-btn.active {
+  background-color: #3498db;
+  color: white;
+  font-weight: bold;
+}
+
+.nav-btn.danger {
+  background-color: #e74c3c;
+  color: white;
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Form element styles */
+input, select, textarea {
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
+
+button {
+  cursor: pointer;
+  padding: 8px 12px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button.danger {
+  background-color: #f44336;
+}
+
+/* Card styles */
+.card-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.card {
+  flex: 1;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+}
+
+/* Tab styles */
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.tab-btn {
+  padding: 10px 20px;
+  background: #ddd;
+  border: none;
+  cursor: pointer;
+}
+
+.tab-btn.active {
+  background: #3498db;
+  color: white;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Error styling */
+.error {
+  color: red;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* Password toggle styling */
+.password-wrapper {
+  position: relative;
+}
+
+.toggle-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+  
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .navbar-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .card-container {
+    flex-direction: column;
+  }
+  
+  .tabs {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  table {
+    font-size: 14px;
+  }
+  
+  th, td {
+    padding: 6px;
+  }
+  
+  input, select, button {
+    font-size: 16px; /* Better for mobile tap targets */
+  }
+}
