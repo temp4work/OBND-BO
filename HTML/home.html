@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Call Center Form</title>
+  <link rel="stylesheet" href="../CSS/home.css" />
+</head>
+<body>
+  <div id="navbar"></div>
+
+  <p id="agentEmail" style="font-weight: bold;"></p>
+  <h2>Call Center Entry Form</h2>
+
+  <form id="callForm">
+    <label>Agent Name</label>
+    <input type="text" name="agent" readonly required />
+    <label>Assigned Number</label>
+    <select name="phone1" id="assignedNumbers" required>
+      <option value="">-- Select Number --</option>
+    </select>
+    <label>Phone Number 2</label>
+    <input type="text" name="phone2" />
+    <label>Phone Number 3</label>
+    <input type="text" name="phone3" />
+    <label>Time of Call</label>
+    <input type="time" name="callTime" required />
+    <label>Number of Attempts</label>
+    <input type="number" name="attempts" min="1" max="3" />
+    <label>Call Status</label>
+    <select name="status" required>
+      <option>Connected</option>
+      <option>Busy</option>
+      <option>No Answer</option>
+      <option>Unavailable</option>
+    </select>
+    <div id="customDropdowns"></div>
+    <label>Notes</label>
+    <textarea name="remarks"></textarea>
+    <button type="submit">Submit</button>
+  </form>
+
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+  <script src="../JS/init.js"></script>
+  <script src="../JS/navbar.js"></script>
+  <script src="../JS/dropdown_manager.js"></script>
+  <script src="../JS/home.js"></script>
+</body>
+</html>

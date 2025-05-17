@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lead Assignment</title>
+  <link rel="stylesheet" href="../CSS/assign.css" />
+</head>
+<body>
+  <div id="navbar"></div>
+
+  <h2>Assignment Manager</h2>
+
+  <button id="importBtn" onclick="importFromSheet()">📤 Import from Google Sheet</button>
+
+  <div class="assign-section">
+    <label>Assign to Agent:</label>
+    <select id="agentSelect"></select>
+
+    <label>Entries to assign:</label>
+    <input type="number" id="assignCount" min="1" />
+
+    <button onclick="assignToAgent()">✅ Assign</button>
+  </div>
+
+  <div class="tabs">
+    <button class="tab-btn active" onclick="switchTab('fresh')">Fresh Data</button>
+    <button class="tab-btn" onclick="switchTab('assigned')">Assigned Data</button>
+  </div>
+
+  <div class="tab-content active" id="tab-fresh">
+    <table><thead><tr><th>Name</th><th>Number 1</th><th>Number 2</th><th>Number 3</th><th>Created</th></tr></thead><tbody id="freshTable"></tbody></table>
+  </div>
+
+  <div class="tab-content" id="tab-assigned">
+    <table><thead><tr><th>Name</th><th>Number 1</th><th>Number 2</th><th>Number 3</th><th>Agent</th><th>Created</th></tr></thead><tbody id="assignedTable"></tbody></table>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+  <script src="../JS/init.js"></script>
+  <script src="../JS/navbar.js"></script>
+  <script src="../JS/assign.js"></script>
+</body>
+</html>

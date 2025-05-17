@@ -1,0 +1,30 @@
+
+nav {
+  background-color: #2c3e50;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+
+.nav-btn {
+  background-color: #ecf0f1;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 5px;
+  padding: 8px 14px;
+  font-size: 14px;
+  color: #2c3e50;
+}
+
+.nav-btn:hover {
+  opacity: 0.85;
+}
+
+.nav-btn.active {
+  background-color: #3498db;
+  color: white;
+  font-weight: bold;
+}

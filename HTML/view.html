@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Call Logs</title>
+  <link rel="stylesheet" href="../CSS/view.css" />
+</head>
+<body>
+  <div id="navbar"></div>
+  <p id="agentEmail" style="font-weight: bold;"></p>
+  <h2>Submitted Call Logs</h2>
+
+  <table>
+    <thead><tr><th>Agent</th><th>Phone</th><th>Time</th><th>Status</th><th>Follow Up</th><th>Remarks</th></tr></thead>
+    <tbody id="callLogs"></tbody>
+  </table>
+
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+  <script src="../JS/init.js"></script>
+  <script src="../JS/navbar.js"></script>
+  <script src="../JS/view.js"></script>
+</body>
+</html>
